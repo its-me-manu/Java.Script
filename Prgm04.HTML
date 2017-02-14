@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating and using an object method.</p>
+
+<p>An object method is a function definition, stored as a property value.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    basic : 7500,
+    hra : 3500,
+    pf : 2000,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+person.Regno="Exp531";
+person.TempID="temp52";
+person.basic += person.hra;
+person.basic -=person.pf;
+
+
+document.getElementById("demo").innerHTML = "Name : "+person.fullName();
+document.getElementById("demo1").innerHTML = "Register Number : "+person.Regno;
+document.getElementById("demo2").innerHTML = "Net Salary : "+person.basic;
+
+
+if(delete person.TempID)
+	{
+		document.getElementById("demo3").innerHTML = "Temporary ID Deleted";
+	}
+else
+	{
+		document.getElementById("demo3").innerHTML =" Temporary ID Deleted";
+	}
+
+</script>
+</body>
+</html>
+
