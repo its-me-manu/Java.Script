@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Loop</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+	function myFunction() 
+		{
+			var num=1, l=10;
+			while (num <=10)
+				{
+					document.write("Multiplication Table of  "+num+"<br> <hr>");
+					for(i=1;i<=l;i++)
+						{
+							document.write(i + " * "+num+" = "+ i*num + "<br>" );
+						}
+					num++;
+					document.write("<br><br>");
+				}
+		}
+</script>
+
+</body>
+</html>
