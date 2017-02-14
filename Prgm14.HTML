@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Figure</title>
+    </head>
+    <body>
+        
+        <span>Background color:</span>
+        <select id="background">
+          <option value="Red">Red</option>
+          <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+          <option value="Black">Black</option>
+          <option value="Gray">Gray</option>
+        </select>
+        
+        <span>Width:</span>
+        <select id="width">
+          <option value="100px">100px</option>
+          <option value="200px">200px</option>
+          <option value="300px">300px</option>
+          <option value="400px">400px</option>
+          <option value="500px">500px</option>
+        </select>
+        
+        <span>Height:</span>
+        <select id="height">
+          <option value="100px">100px</option>
+          <option value="200px">200px</option>
+          <option value="300px">300px</option>
+          <option value="400px">400px</option>
+          <option value="500px">500px</option>
+        </select>
+       <br/><br/>
+        
+        <div id="Rectangle" style="background:black; width:100px; height:100px;"></div>
+        
+        <script>
+        			var prop = document.getElementsByTagName('select');
+				var shape = document.getElementById('Rectangle');
+				function ChangePic()
+					{
+						var style = this.id;
+						var value = this.value;
+						shape.style[style] = value;
+				    }
+
+				for( var i = 0; i < prop.length; i++ )
+					{
+				    		    prop[i].addEventListener( 'change', ChangePic );
+				    	}
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+<h1 id="head" onmouseover=" clr_red()" onmouseout="clr_blk()">Mouse over this text</h1>
+
+
+<button id="myBtn">Click</button>
+<p id="demo"></p>
+
+
+<script>
+	function clr_red() 
+		{
+			document.getElementById("head").style.color='red';
+		}
+		function clr_blk() 
+		{
+			document.getElementById("head").style.color='black';
+		}
+	
+	document.getElementById("myBtn").addEventListener("click", displayDate);
+	document.getElementById("myBtn").addEventListener("mouseover", ch_clr);
+	document.getElementById("myBtn").addEventListener("mouseout", ch_clrb);
+	document.getElementById("demo").addEventListener("mousedown", ft_clr);
+	document.getElementById("demo").addEventListener("mouseup", ftp_clr);
+	document.getElementById("demo").addEventListener("mouseover", ft_clr);
+	document.getElementById("demo").addEventListener("mouseout", ftp_clr);
+	function displayDate() 
+		{
+    			document.getElementById("demo").innerHTML = Date();	
+    			alert("Time is :  " + Date());
+    			
+    		}
+    	function ch_clr()
+    		{
+    			this.style.color="red";
+    			this.style.backgroundColor="white";
+    			this.style.width="80px";
+    			this.style.fontSize="26px";
+    		}
+     	function ch_clrb()
+    		{
+    			this.style.color="black";
+    			this.style.backgroundColor="skyblue";
+    			this.style.width="50px";
+    			this.style.fontSize="16px";
+    		}
+    	function ft_clr()
+    		{
+    			this.style.color="red";
+    			this.style.fontSize="26px";
+    		}
+   	function ftp_clr()
+    		{
+    			this.style.color="black";
+    			this.style.fontSize="16px";
+    		}
+</script>
+</body>
+</html>
+
