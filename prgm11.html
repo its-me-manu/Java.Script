@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Loop</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+	function myFunction() 
+		{
+			var Emp=[
+							{EmpID:101, Name:"Manu R",Desig:"SE Trainee"},
+							{EmpID:102, Name:"Renjith R",Desig:"SE Trainee"},
+							{EmpID:103, Name:"Sachin Kumar",Desig:"SE Trainee"},
+							{EmpID:104, Name:"Shintu V",Desig:"SE Trainee"}
+						];
+			document.write("EmpID       Name       Designation"+"<br><br>");
+			for(i=0;i<Emp.length;i++)
+						{
+							document.write(Emp[i].EmpID+"         "+Emp[i].Name+"        "+Emp[i].Desig+"<br>");
+						}
+		}
+</script>
+
+</body>
+</html>
